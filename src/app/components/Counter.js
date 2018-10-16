@@ -19,8 +19,8 @@ class Counter extends Component {
   }
 
   render () {
-    console.log('Counter', count);
     const { count } = this.props
+    console.log('Counter', count);
     return (
       <div>
         <h1>Count: <span>{count}</span></h1>

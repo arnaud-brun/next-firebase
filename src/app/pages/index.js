@@ -17,9 +17,7 @@ import Examples from '../components/Example'
 class Index extends React.Component {
   static getInitialProps ({ reduxStore, req }) {
     const isServer = !!req
-    if (!isServer) {
-      reduxStore.dispatch(serverRenderClock(isServer))
-    }
+    reduxStore.dispatch(serverRenderClock(isServer))
     return {}
   }
 
@@ -33,6 +31,8 @@ class Index extends React.Component {
   }
 
   render () {
+    console.log('index page', this.props);
+
     return (
       <App>
         <>
