@@ -1,20 +1,19 @@
 export default ({ lastUpdate, light }) => {
-  return (
-    <div className={light ? 'light' : ''}>
-      {format(new Date(lastUpdate))}
-      <style jsx>{`
-        div {
-          padding: 15px;
-          display: inline-block;
-          color: #82FA58;
-          font: 50px menlo, monaco, monospace;
-          background-color: #000;
-        }
+  let clockStyle = {
+    padding: '15px',
+    display: 'inline-block',
+    color: '#82FA58',
+    font: '50px menlo, monaco, monospace',
+    backgroundColor: '#000',
+  }
 
-        .light {
-          background-color: #999;
-        }
-      `}</style>
+  if (light) {
+    clockStyle.backgroundColor = '#999'
+  }
+
+  return (
+    <div style={clockStyle}>
+      {format(new Date(lastUpdate))}
     </div>
   )
 }
