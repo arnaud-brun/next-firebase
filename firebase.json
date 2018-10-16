@@ -7,7 +7,8 @@
         "function": "app-next"
       }
     ],
-    "predeploy": "yarn build-public"
+    "predeploy": "yarn build-public",
+    "trailingSlash": true
   },
   "functions": {
     "source": "dist/functions",
