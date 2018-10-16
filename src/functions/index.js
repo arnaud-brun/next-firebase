@@ -19,7 +19,6 @@ const app = {
 const greetings = {
   mars,
   jupiter,
-  next,
   // other funcs
 }
 
