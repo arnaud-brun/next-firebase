@@ -2,6 +2,17 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { incrementCount, decrementCount, resetCount } from '../store'
 
+
+// import { Button } from 'antd'
+
+const Button = (props) => {
+  return (
+    <button {...props}>
+      {props.children}
+    </button>
+  )
+}
+
 class Counter extends Component {
   increment = () => {
     const {dispatch} = this.props
@@ -24,9 +35,9 @@ class Counter extends Component {
     return (
       <div>
         <h1>Count: <span>{count}</span></h1>
-        <button onClick={this.increment}>+1</button>
-        <button onClick={this.decrement}>-1</button>
-        <button onClick={this.reset}>Reset</button>
+        <Button onClick={this.increment}>+1</Button>
+        <Button onClick={this.decrement}>-1</Button>
+        <Button onClick={this.reset}>Reset</Button>
       </div>
     )
   }
